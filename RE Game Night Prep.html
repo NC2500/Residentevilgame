@@ -1,0 +1,176 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>RE Game Night Prep</title><meta name="claude:viewport-fit-sides" content="cover"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"><style id="css">
+/* Layout: one column. Floor plan first, then the task list grouped by job. Dark lab look, single theme by choice. */
+:root{
+  --bg:#0f1312; --panel:#161c1a; --line:#2a3330; --fg:#e7e3d7; --muted:#8e978f;
+  --blood:#a51e1e; --herb:#5fa35a; --redherb:#cf3f3f; --fairy:#f2c14e; --glass:#6fa8c7; --screen:#d8dccf;
+  --display:"Special Elite","Courier New",monospace; --body:"Barlow",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:900px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:36px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(28px,5vw,40px);margin:0;letter-spacing:.02em;text-wrap:balance}
+h2{font-family:var(--display);font-weight:400;font-size:24px;margin:0 0 4px}
+h3{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0;font-weight:600}
+.sub{color:var(--muted);margin:6px 0 0;max-width:62ch}
+.planbox{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px}
+.planbox svg{display:block;width:100%;min-width:560px;height:auto}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 20px;margin-top:14px;font-size:14px}
+.legend div{display:flex;gap:10px;align-items:center;min-width:0}
+.sw{flex:none;width:22px;height:10px;border-radius:2px}
+.notes{margin:14px 0 0;padding-left:18px;color:var(--muted);font-size:14px;display:flex;flex-direction:column;gap:4px}
+.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.meter{flex:1;min-width:160px;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--herb)}
+.count{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:13px;color:var(--muted)}
+.status{font-size:13px;color:var(--muted);min-height:1.5em}
+.group{display:flex;flex-direction:column;gap:2px}
+.group h3{padding:14px 0 8px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.task{display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;align-items:start;padding:10px 0;border-bottom:1px solid var(--line)}
+.task input[type=checkbox]{width:18px;height:18px;margin:3px 0 0;accent-color:var(--herb)}
+.task label{min-width:0;cursor:pointer}
+.num{font-family:var(--mono);font-weight:500;color:var(--fairy);font-size:13px;margin-right:4px}
+.items{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:14px;display:flex;flex-direction:column;gap:2px}
+.task.done .items{text-decoration:line-through}
+.task.done label{color:var(--muted);text-decoration:line-through}
+.when{font-family:var(--mono);font-size:11px;color:var(--fairy);border:1px solid #4a3f22;border-radius:3px;padding:1px 6px;white-space:nowrap;margin-top:2px}
+.owner{grid-column:2/4;display:flex;gap:8px;align-items:center}
+.owner span{font-size:12px;color:var(--muted)}
+.owner input{flex:1;min-width:0;max-width:240px;background:transparent;border:0;border-bottom:1px dashed var(--line);color:var(--fg);font:inherit;font-size:14px;padding:2px 0}
+.owner input:focus{outline:none;border-bottom-color:var(--fairy)}
+input:focus-visible{outline:2px solid var(--fairy);outline-offset:2px}
+</style><main id="root"></main><script id="state" type="application/json">{"tasks": [{"id": "g1", "g": "Games and Hardware", "w": "2 wks out", "t": "Confirm who brings each console or gaming PC (3 needed)", "o": "", "d": false, "i": ["Station 1, RE4 Remake: console or PC", "Station 2, RE2 Remake: console or PC", "Station 3, RE6: console or PC with split-screen co-op", "Optional: PS5, Xbox Series or strong PC for RE9 Requiem"], "n": 1}, {"id": "g2", "g": "Games and Hardware", "w": "2 wks out", "t": "Confirm game copies: RE2 Remake, RE4 Remake, RE6, and RE9 Requiem if anyone has PS5, Xbox Series or a strong PC", "o": "", "d": false, "i": ["RE2 Remake", "RE4 Remake", "RE6", "RE9 Requiem (optional)"], "n": 2}, {"id": "g3", "g": "Games and Hardware", "w": "2 wks out", "t": "Visit venue: test all 3 projectors, check inputs (HDMI?), find every power outlet", "o": "", "d": false, "i": ["Note each projector's input type", "Test brightness with lights dimmed", "Map every power outlet", "Take photos of the room for the team"], "n": 3}, {"id": "g4", "g": "Games and Hardware", "w": "1 wk out", "t": "Get 3 long HDMI cables (5 to 10 m) plus any adapters", "o": "", "d": false, "i": ["3 x HDMI cable, 5 to 10 m", "Adapters to match projector inputs", "1 spare HDMI cable"], "n": 4}, {"id": "g5", "g": "Games and Hardware", "w": "1 wk out", "t": "Get 3 speakers, one per station", "o": "", "d": false, "i": ["3 x speaker", "Aux or Bluetooth cables for each"], "n": 5}, {"id": "g6", "g": "Games and Hardware", "w": "1 wk out", "t": "Get extension cords, power strips and gaffer tape for cables", "o": "", "d": false, "i": ["3 x power strip", "3 x extension cord, 5 m or longer", "2 x roll gaffer tape"], "n": 6}, {"id": "g7", "g": "Games and Hardware", "w": "3 days out", "t": "Install and update all games, log in to accounts", "o": "", "d": false, "i": ["RE2 Remake updated", "RE4 Remake updated", "RE6 updated", "All accounts logged in"], "n": 7}, {"id": "g8", "g": "Games and Hardware", "w": "3 days out", "t": "Prepare save files at good starting points, unlock RE4 Mercenaries", "o": "", "d": false, "i": ["RE2: save near the start", "RE4: Mercenaries unlocked", "RE6: co-op save at a chapter start"], "n": 8}, {"id": "g9", "g": "Games and Hardware", "w": "Day before", "t": "Charge all controllers (2 to 4 per station) and pack charging cables", "o": "", "d": false, "i": ["2 to 4 controllers per station (6 to 12 total)", "Charging cables", "Spare AA batteries if any controller needs them"], "n": 9}, {"id": "g10", "g": "Games and Hardware", "w": "Day before", "t": "Label every borrowed item with the owner's name on tape", "o": "", "d": false, "i": ["Masking tape and marker", "Written list: item, owner, station"], "n": 10}, {"id": "d1", "g": "Decor and Venue", "w": "2 wks out", "t": "Measure the room and the two diagonal lines for the cloth dividers", "o": "", "d": false, "i": ["Length of each diagonal", "Wall and ceiling height", "Possible hanging points"], "n": 11}, {"id": "d2", "g": "Decor and Venue", "w": "1 wk out", "t": "Get enough blood-splattered cloth for 4 dividers plus table covers", "o": "", "d": false, "i": ["4 x divider cloth, sized to the measurements", "5 x table cover (3 console tables, drinks, typewriter)"], "n": 12}, {"id": "d3", "g": "Decor and Venue", "w": "1 wk out", "t": "Sort out how to hang the dividers: rope or wire between walls, poles, or drape stands. Ask the venue what you can attach to", "o": "", "d": false, "i": ["Rope or wire", "Hooks, clamps or poles", "Zip ties"], "n": 13}, {"id": "d4", "g": "Decor and Venue", "w": "1 wk out", "t": "Check fairy lights work; buy spare batteries or extension cords", "o": "", "d": false, "i": ["Fairy lights for 4 dividers", "Spare batteries or extension cords"], "n": 14}, {"id": "d5", "g": "Decor and Venue", "w": "1 wk out", "t": "Buy red tinted paper or cellophane for ceiling lights (enough for every light)", "o": "", "d": false, "i": ["Red cellophane, enough for every ceiling light", "Masking tape"], "n": 15}, {"id": "d6", "g": "Decor and Venue", "w": "1 wk out", "t": "Buy real potted plants: green ones (pothos, fern) and red ones (red aglaonema, croton)", "o": "", "d": false, "i": ["4 x green potted plant", "4 x red potted plant"], "n": 16}, {"id": "d7", "g": "Decor and Venue", "w": "1 wk out", "t": "Find a real typewriter: borrow, or check Carousell or thrift shops", "o": "", "d": false, "i": ["1 x working typewriter", "Paper", "Spare ink ribbon if possible"], "n": 17}, {"id": "d8", "g": "Decor and Venue", "w": "3 days out", "t": "Print station signs (RE2, RE4, RE6), Green Herb and Red Herb plant labels, biohazard signs", "o": "", "d": false, "i": ["3 x station sign: RE2, RE4, RE6", "8 x plant label: Green Herb, Red Herb", "10 x biohazard sign", "2 x door sign: IN, OUT"], "n": 18}, {"id": "d9", "g": "Decor and Venue", "w": "Day of", "t": "Cover ceiling lights with red paper. Keep it off hot bulbs; LED panels only", "o": "", "d": false, "n": 19}, {"id": "d10", "g": "Decor and Venue", "w": "Day of", "t": "Hang dividers, run fairy lights along their tops, place plants", "o": "", "d": false, "n": 20}, {"id": "p1", "g": "Photobooth and Save Room", "w": "1 wk out", "t": "Pick the backdrop: blood cloth on the south-west divider", "o": "", "d": false, "i": ["Blood cloth backdrop", "Clips to fix it to the divider"], "n": 21}, {"id": "p2", "g": "Photobooth and Save Room", "w": "1 wk out", "t": "Get a phone tripod, ring light, and Bluetooth shutter remote", "o": "", "d": false, "i": ["Phone tripod", "Ring light", "Bluetooth shutter remote"], "n": 22}, {"id": "p3", "g": "Photobooth and Save Room", "w": "3 days out", "t": "Make props: herb plants, First Aid Spray bottles, printed signs, lab coats. Check uni rules before using toy guns", "o": "", "d": false, "i": ["Herb plant props", "First Aid Spray bottles", "Printed signs", "Lab coats"], "n": 23}, {"id": "p4", "g": "Photobooth and Save Room", "w": "3 days out", "t": "Make a shared photo album and print its QR code for the booth", "o": "", "d": false, "i": ["Shared photo album link", "Printed QR code sign"], "n": 24}, {"id": "s1", "g": "Photobooth and Save Room", "w": "3 days out", "t": "Plan the save room: typewriter on a small table, cloth cover, plants either side", "o": "", "d": false, "i": ["Small table", "Cloth cover", "2 plants for either side"], "n": 25}, {"id": "s2", "g": "Photobooth and Save Room", "w": "Day of", "t": "Set up typewriter with paper so guests can type a message", "o": "", "d": false, "i": ["Stack of A4 paper"], "n": 26}, {"id": "k1", "g": "Drinks", "w": "Day before", "t": "Buy drink supplies: Sprite, apple syrup, Ribena, canned lychee, lychee drink, blueberries, mint, gummy worms, ice", "o": "", "d": false, "i": ["Sprite: 14 x 1.5 L", "Apple syrup: 2 L", "Green food colouring: 1 bottle", "Ribena concentrate: 2 L", "Canned lychee: 7 cans", "Lychee drink: 10 L", "Blueberries: 3 punnets", "Mint: 2 bunches", "Gummy worms: 3 packs", "Ice: 20 kg", "Drinking water: 10 L", "Amounts are for about 50 guests; scale to the sign-up count"], "n": 27}, {"id": "k2", "g": "Drinks", "w": "Day before", "t": "Buy cups with lids, or plan to fill cups halfway", "o": "", "d": false, "i": ["200 cups with lids"], "n": 28}, {"id": "k3", "g": "Drinks", "w": "Day before", "t": "Stuff lychees with blueberries and chill overnight", "o": "", "d": false, "i": ["Covered container, fridge space overnight"], "n": 29}, {"id": "k4", "g": "Drinks", "w": "Day before", "t": "Print drink labels: Green Herb, Red Herb, Las Plagas, First Aid Spray", "o": "", "d": false, "i": ["Green Herb, Red Herb, Las Plagas, First Aid Spray"], "n": 30}, {"id": "k5", "g": "Drinks", "w": "Day of", "t": "Set up drinks table by the window, away from all electronics. Paper towels at each station", "o": "", "d": false, "i": ["Drinks table", "4 x drink dispenser or jug", "Ladle", "4 rolls paper towels"], "n": 31}, {"id": "r1", "g": "Event Operations", "w": "2 wks out", "t": "Book venue and get approval for gaming, loud audio and decor", "o": "", "d": false, "i": ["Venue booking confirmed", "Written approval for gaming, audio and decor"], "n": 32}, {"id": "r2", "g": "Event Operations", "w": "2 wks out", "t": "Check if the event must be 18+ (games are rated 18)", "o": "", "d": false, "n": 33}, {"id": "r3", "g": "Event Operations", "w": "2 wks out", "t": "Post the event and open sign-ups", "o": "", "d": false, "i": ["Event poster", "Sign-up form"], "n": 34}, {"id": "r4", "g": "Event Operations", "w": "1 wk out", "t": "Assign one marshal per station plus one for drinks and photobooth", "o": "", "d": false, "i": ["3 station marshals", "1 drinks marshal", "1 photobooth marshal"], "n": 35}, {"id": "r5", "g": "Event Operations", "w": "3 days out", "t": "Set the rotation rule: swap on death or every 10 to 15 minutes", "o": "", "d": false, "n": 36}, {"id": "r6", "g": "Event Operations", "w": "3 days out", "t": "Make queue sheets per station and a leaderboard for the hub", "o": "", "d": false, "i": ["3 x queue sheet", "1 x leaderboard", "Markers"], "n": 37}, {"id": "r7", "g": "Event Operations", "w": "3 days out", "t": "Buy small prizes for top scores", "o": "", "d": false, "i": ["3 to 5 small prizes"], "n": 38}, {"id": "r8", "g": "Event Operations", "w": "3 days out", "t": "Print content warning sign for the entrance", "o": "", "d": false, "i": ["1 x content warning sign"], "n": 39}, {"id": "r9", "g": "Event Operations", "w": "Day of", "t": "Bring first aid kit; keep both doors and the path to them clear", "o": "", "d": false, "i": ["First aid kit"], "n": 40}, {"id": "x1", "g": "All committees: day of", "w": "Day of", "t": "Arrive 3 hours early", "o": "", "d": false, "n": 41}, {"id": "x2", "g": "All committees: day of", "w": "Day of", "t": "Set up stations, tape down every cable", "o": "", "d": false, "n": 42}, {"id": "x3", "g": "All committees: day of", "w": "Day of", "t": "Test every station with sound at the same time; balance volumes", "o": "", "d": false, "n": 43}, {"id": "x4", "g": "All committees: day of", "w": "Day of", "t": "Check the dividers do not block any projector beam", "o": "", "d": false, "n": 44}, {"id": "x5", "g": "All committees: day of", "w": "Day of", "t": "Prep drinks last so they stay cold", "o": "", "d": false, "n": 45}, {"id": "z1", "g": "All committees: pack-down", "w": "After", "t": "Return borrowed gear with the owner list", "o": "", "d": false, "n": 46}, {"id": "z2", "g": "All committees: pack-down", "w": "After", "t": "Remove red paper from ceiling lights and all tape", "o": "", "d": false, "n": 47}, {"id": "z3", "g": "All committees: pack-down", "w": "After", "t": "Take dividers down, bag decor and plants for next time", "o": "", "d": false, "n": 48}]}</script><script id="app">
+(function(){
+var state=JSON.parse(document.getElementById('state').textContent);
+var root=document.getElementById('root');
+var artifact=null, timer=null, saving=false;
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+var PLAN='<svg viewBox="30 30 580 590" role="img" aria-label="Floor plan of the room">'+
+'<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#e7e3d7"/></marker></defs>'+
+'<rect x="0" y="0" width="640" height="640" fill="#161c1a"/>'+
+/* bays tint */
+'<path d="M70,70 L570,70 L320,320 Z" fill="#1b2422"/><path d="M70,70 L70,570 L320,320 Z" fill="#1a2120"/><path d="M570,70 L570,570 L320,320 Z" fill="#1a2120"/><path d="M70,570 L570,570 L320,320 Z" fill="#20201b"/>'+
+/* walls */
+'<g stroke="#e7e3d7" stroke-width="5" stroke-linecap="square" fill="none"><path d="M70,70 L80,70"/><path d="M130,70 L510,70"/><path d="M560,70 L570,70 L570,570 L70,570 L70,70"/></g>'+
+/* window */
+'<g stroke="#6fa8c7" stroke-width="3"><line x1="150" y1="566" x2="490" y2="566"/><line x1="150" y1="574" x2="490" y2="574"/></g>'+
+'<rect x="150" y="567" width="340" height="6" fill="#161c1a"/>'+
+'<text x="320" y="596" fill="#6fa8c7" font-family="IBM Plex Mono,monospace" font-size="12" text-anchor="middle">WINDOW</text>'+
+/* doors */
+'<g stroke="#e7e3d7" stroke-width="2" fill="none"><line x1="80" y1="70" x2="80" y2="120"/><path d="M80,120 A50,50 0 0 0 130,70" stroke-dasharray="3 3"/><line x1="560" y1="70" x2="560" y2="120"/><path d="M560,120 A50,50 0 0 1 510,70" stroke-dasharray="3 3"/></g>'+
+'<text x="105" y="52" fill="#e7e3d7" font-family="IBM Plex Mono,monospace" font-size="12" text-anchor="middle">DOOR · IN</text>'+
+'<text x="535" y="52" fill="#e7e3d7" font-family="IBM Plex Mono,monospace" font-size="12" text-anchor="middle">DOOR · OUT</text>'+
+/* screens */
+'<g fill="#d8dccf"><rect x="240" y="74" width="160" height="6"/><rect x="74" y="240" width="6" height="160"/><rect x="560" y="240" width="6" height="160"/></g>'+
+/* dividers */
+'<g stroke="#a51e1e" stroke-width="7" stroke-linecap="round"><line x1="282" y1="282" x2="150" y2="150"/><line x1="358" y1="282" x2="490" y2="150"/><line x1="282" y1="358" x2="78" y2="562"/><line x1="358" y1="358" x2="562" y2="562"/></g>'+
+'<g stroke="#f2c14e" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"><line x1="282" y1="282" x2="150" y2="150"/><line x1="358" y1="282" x2="490" y2="150"/><line x1="282" y1="358" x2="78" y2="562"/><line x1="358" y1="358" x2="562" y2="562"/></g>'+
+/* hub */
+'<circle cx="320" cy="320" r="60" fill="#0f1312" stroke="#8e978f" stroke-dasharray="4 4"/>'+
+'<text x="320" y="314" fill="#e7e3d7" font-family="Special Elite,monospace" font-size="14" text-anchor="middle">HUB</text>'+
+'<text x="320" y="331" fill="#8e978f" font-family="Barlow,sans-serif" font-size="11" text-anchor="middle">queue + leaderboard</text>'+
+/* north station */
+'<text x="320" y="104" fill="#e7e3d7" font-family="Special Elite,monospace" font-size="16" text-anchor="middle">RE4 REMAKE</text>'+
+'<text x="320" y="120" fill="#8e978f" font-family="Barlow,sans-serif" font-size="11" text-anchor="middle">Mercenaries score runs</text>'+
+'<g fill="#3a4441"><circle cx="295" cy="170" r="11"/><circle cx="320" cy="170" r="11"/><circle cx="345" cy="170" r="11"/></g>'+
+'<rect x="250" y="158" width="22" height="16" fill="#8e978f"/>'+
+'<rect x="311" y="222" width="18" height="12" rx="2" fill="#f2c14e"/><path d="M320,222 L250,82 M320,222 L390,82" stroke="#f2c14e" stroke-opacity=".25" stroke-dasharray="3 4"/>'+
+/* west station */
+'<text x="88" y="228" fill="#e7e3d7" font-family="Special Elite,monospace" font-size="16">RE2 REMAKE</text>'+
+'<g fill="#3a4441"><circle cx="150" cy="295" r="11"/><circle cx="150" cy="320" r="11"/><circle cx="150" cy="345" r="11"/></g>'+
+'<rect x="140" y="368" width="16" height="22" fill="#8e978f"/>'+
+'<rect x="222" y="311" width="12" height="18" rx="2" fill="#f2c14e"/><path d="M222,320 L82,250 M222,320 L82,390" stroke="#f2c14e" stroke-opacity=".25" stroke-dasharray="3 4"/>'+
+/* east station */
+'<text x="552" y="228" fill="#e7e3d7" font-family="Special Elite,monospace" font-size="16" text-anchor="end">RE6 CO-OP</text>'+
+'<text x="552" y="244" fill="#8e978f" font-family="Barlow,sans-serif" font-size="11" text-anchor="end">2 players split-screen</text>'+
+'<g fill="#3a4441"><circle cx="490" cy="295" r="11"/><circle cx="490" cy="320" r="11"/><circle cx="490" cy="345" r="11"/></g>'+
+'<rect x="484" y="368" width="16" height="22" fill="#8e978f"/>'+
+'<rect x="406" y="311" width="12" height="18" rx="2" fill="#f2c14e"/><path d="M418,320 L558,250 M418,320 L558,390" stroke="#f2c14e" stroke-opacity=".25" stroke-dasharray="3 4"/>'+
+/* south bay */
+'<text x="320" y="420" fill="#e7e3d7" font-family="Special Elite,monospace" font-size="16" text-anchor="middle">SOCIAL BAY</text>'+
+'<rect x="250" y="528" width="140" height="26" fill="#2a2a22" stroke="#cf3f3f"/>'+
+'<text x="320" y="546" fill="#e7e3d7" font-family="Barlow,sans-serif" font-size="12" text-anchor="middle">Drinks table</text>'+
+'<line x1="170" y1="455" x2="232" y2="393" stroke="#cf3f3f" stroke-width="12" stroke-opacity=".55" transform="translate(8,8)"/>'+
+'<text x="215" y="478" fill="#e7e3d7" font-family="Barlow,sans-serif" font-size="12" text-anchor="middle">Photobooth</text>'+
+'<circle cx="250" cy="470" r="5" fill="#e7e3d7"/><path d="M246,466 L222,442" stroke="#e7e3d7" stroke-width="1.5" marker-end="url(#ar)"/>'+
+'<text x="262" y="490" fill="#8e978f" font-family="Barlow,sans-serif" font-size="10">tripod</text>'+
+'<rect x="410" y="436" width="40" height="26" fill="#3a4441" stroke="#8e978f"/>'+
+'<text x="430" y="453" fill="#e7e3d7" font-family="IBM Plex Mono,monospace" font-size="9" text-anchor="middle">TYPE</text>'+
+'<text x="430" y="484" fill="#e7e3d7" font-family="Barlow,sans-serif" font-size="12" text-anchor="middle">Save room</text>'+
+/* plants */
+'<g><circle cx="398" cy="440" r="7" fill="#5fa35a"/><circle cx="462" cy="440" r="7" fill="#cf3f3f"/><circle cx="236" cy="540" r="7" fill="#5fa35a"/><circle cx="404" cy="540" r="7" fill="#cf3f3f"/><circle cx="268" cy="320" r="0" fill="none"/><circle cx="320" cy="396" r="7" fill="#5fa35a"/><circle cx="145" cy="105" r="7" fill="#cf3f3f"/><circle cx="495" cy="105" r="7" fill="#5fa35a"/></g>'+
+/* flow */
+'<path d="M105,82 C130,150 200,200 265,268" stroke="#e7e3d7" stroke-width="1.5" fill="none" stroke-dasharray="6 4" marker-end="url(#ar)"/>'+
+'<path d="M375,268 C440,200 510,150 535,90" stroke="#e7e3d7" stroke-width="1.5" fill="none" stroke-dasharray="6 4" marker-end="url(#ar)"/>'+
+'</svg>';
+
+function legend(){
+  var items=[['#a51e1e','Blood cloth divider'],['#f2c14e','Fairy lights along divider tops'],['#d8dccf','Projector screen wall'],['#f2c14e','Projector (box) and beam'],['#3a4441','Seats or beanbags'],['#8e978f','Console table'],['#5fa35a','Green Herb plant'],['#cf3f3f','Red Herb plant'],['#6fa8c7','Window']];
+  return items.map(function(i){return '<div><span class="sw" style="background:'+i[0]+'"></span>'+esc(i[1])+'</div>';}).join('');
+}
+
+function render(){
+  var done=state.tasks.filter(function(t){return t.d;}).length, total=state.tasks.length;
+  var groups=[], by={};
+  state.tasks.forEach(function(t){ if(!by[t.g]){by[t.g]=[];groups.push(t.g);} by[t.g].push(t); });
+  var h='<div class="wrap"><header><h1>RE Game Night Prep</h1><p class="sub">Three projector stations, one social bay by the window, and a hub in the middle. Every task is numbered and lists what it needs. Add an owner to each task and tick it when done; changes save for everyone with edit access. Committee briefs are in the RE Game Night Committee Brief doc.</p></header>';
+  h+='<section><h2>Floor plan</h2><p class="sub">Two cloth dividers run along each diagonal of the room and meet at an open hub. Guests enter by the left door, queue at the hub, and leave by the right door. Drinks stay in the window bay, away from every console.</p><div class="planbox">'+PLAN+'</div><div class="legend">'+legend()+'</div>'+
+  '<ul class="notes"><li>All ceiling lights get red paper. Fairy lights give the bays their glow.</li><li>If the projectors are fixed to the ceiling, put the seats under the beam, never in front of the lens.</li><li>Keep the cloth at least 1 m from projectors; they get hot.</li><li>The photobooth faces the divider, so window light falls on guests, not behind them.</li><li>Use RE9 Requiem as a guest slot on any station if someone brings the hardware.</li></ul></section>';
+  h+='<section><div class="bar"><h2>Tasks</h2><div class="meter"><i style="width:'+(total?Math.round(done/total*100):0)+'%"></i></div><span class="count">'+done+' / '+total+' done</span></div><div class="status" id="status" aria-live="polite"></div>';
+  groups.forEach(function(g){
+    var list=by[g], gd=list.filter(function(t){return t.d;}).length;
+    h+='<div class="group"><h3><span>'+esc(g)+'</span><span class="count">'+gd+'/'+list.length+'</span></h3>';
+    list.forEach(function(t){
+      h+='<div class="task'+(t.d?' done':'')+'"><input type="checkbox" id="c-'+t.id+'" data-id="'+t.id+'"'+(t.d?' checked':'')+'><label for="c-'+t.id+'">'+esc(t.t)+'</label><span class="when">'+esc(t.w)+'</span>'+
+         '<div class="owner"><span>Owner</span><input type="text" id="o-'+t.id+'" data-id="'+t.id+'" value="'+esc(t.o)+'" placeholder="add a name" aria-label="Owner for: '+esc(t.t)+'"></div></div>';
+    });
+    h+='</div>';
+  });
+  h+='</section></div>';
+  root.innerHTML=h;
+}
+
+function setStatus(m){var s=document.getElementById('status'); if(s) s.textContent=m;}
+function find(id){for(var i=0;i<state.tasks.length;i++) if(state.tasks[i].id===id) return state.tasks[i];}
+
+var RESET=':root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}';
+function buildDoc(){
+  var css=document.getElementById('css').textContent;
+  var app=document.getElementById('app').textContent;
+  var json=JSON.stringify(state).replace(/</g,'\\u003c');
+  var fonts=document.querySelector('link[rel=stylesheet]').getAttribute('href');
+  var content='<title>RE Game Night Prep</title><meta name="claude:viewport-fit-sides" content="cover"><link rel="stylesheet" href="'+fonts+'"><style id="css">'+css+'</style><main id="root"></main><script id="state" type="application/json">'+json+'<\/script><script id="app">'+app+'<\/script>';
+  return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>'+RESET+'</style></head><body>'+content+'</body></html>';
+}
+
+function queueSave(){
+  clearTimeout(timer);
+  if(!artifact){setStatus('Changes show only on this screen. Open the shared page with edit access to save.');return;}
+  setStatus('Saving…');
+  timer=setTimeout(function(){
+    if(saving) return queueSave();
+    saving=true;
+    artifact.publish(buildDoc()).then(function(){setStatus('Saved');},function(e){
+      var c=e&&e.code;
+      if(c==='conflict') setStatus('Someone else saved first. The page will reload with their version.');
+      else if(c==='not_granted'||c==='not_writer') setStatus('You have view access only, so changes are not saved.');
+      else setStatus('Could not save. Try again in a moment.');
+    }).then(function(){saving=false;});
+  },900);
+}
+
+root.addEventListener('change',function(e){
+  var el=e.target, t=find(el.getAttribute('data-id')); if(!t) return;
+  if(el.type==='checkbox'){ t.d=el.checked; var y=window.scrollY; render(); window.scrollTo(0,y); }
+  else { t.o=el.value.slice(0,40); }
+  queueSave();
+});
+
+render();
+if(window.claude&&window.claude.use){ window.claude.use('artifact').then(function(a){artifact=a;}).catch(function(){}); }
+})();
+</script>
+
+</body></html>
